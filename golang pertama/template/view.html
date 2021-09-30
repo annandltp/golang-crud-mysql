@@ -1,0 +1,48 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Input Data - Fikom - UDB</title>
+	</head>
+	<body>
+		<form method="post" action="/process">
+			<h1> Selamat Datang </h1>
+			<p> Di Universitas Duta Bangsa Surakarta</p>
+			<label>Nim :</label>
+			<input type="text" placeholder="Inputkan Nim anda" name="nim" required />
+			<br />
+			<br>
+			<label>Nama :</label>
+			<input type="text" placeholder="Inputkan nama anda" name="name" required />
+			<br />
+			<br>
+			<label>Jurusan :</label>
+			<input type="text" placeholder="Inputkan Jurusan anda" name="jurusan" required />
+			<br />
+			<br>
+			<label>Pesan :</label>
+			<input type="text" placeholder="Isikan Pesan kalian" name="message" required />
+			<br />
+			<br>
+			<button type="submmit">Cetak</button>
+		</form>
+	</body>
+</html>
+{{end}}
+
+{{define "result"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tampil Data</title>
+	</head>
+	<body>
+		<h1>Hello {{.name}}</h1>
+		<p><b><font size="5" color="blue"> Selamat Datang  </font></b><font color="red"> Di Universitas Duta Bangsa Surakarta  </font></p>
+		<p><b>NIM Anda : </b>{{.nim}}</p>
+		<p><b>Nama Anda : </b>{{.name}}</p>
+		<p><b>Jurusan Anda : </b>{{.jurusan}}</p>
+		<p><b>Pesan Anda : </b>{{.message}}</p>
+	</body>
+</html>
+{{end}}
